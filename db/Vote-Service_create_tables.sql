@@ -11,10 +11,11 @@ CREATE TABLE test.user (
 CONSTRAINT userId_PK PRIMARY KEY (userId)
 );
 --
--- Table structure for table Table1.
+-- Table structure for table numbers.
 --
-CREATE TABLE test.Table1 (
+CREATE TABLE test.numbers (
   id int ,
+  numbers int ,
 CONSTRAINT id_PK PRIMARY KEY (id)
 );
 
