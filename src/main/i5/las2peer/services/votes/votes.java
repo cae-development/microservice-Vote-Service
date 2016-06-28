@@ -107,7 +107,7 @@ public class votes extends Service {
     // numbers
     boolean numbers_condition = true;
     if(numbers_condition) {
-JSONArray array = new JSONArray();
+      JSONArray array = new JSONArray();
       Connection conn = null;
       try {
         conn = dbm.getConnection();
