@@ -14,7 +14,7 @@ CONSTRAINT userId_PK PRIMARY KEY (userId)
 -- Table structure for table numbers.
 --
 CREATE TABLE test.numbers (
-  id int ,
+  id int NOT NULL AUTO_INCREMENT ,
   number int ,
 CONSTRAINT id_PK PRIMARY KEY (id)
 );
