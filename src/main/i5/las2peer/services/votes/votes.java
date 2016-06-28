@@ -106,7 +106,8 @@ public class votes extends Service {
 
     // numbers
     boolean numbers_condition = true;
-    if(numbers_condition) {
+    if(numbers_condition) { 
+      JSONObject resultJson = new JSONObject();
       JSONArray array = new JSONArray();
       Connection conn = null;
       try {
