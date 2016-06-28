@@ -15,7 +15,7 @@ CONSTRAINT userId_PK PRIMARY KEY (userId)
 --
 CREATE TABLE test.numbers (
   id int ,
-  numbers int ,
+  number int ,
 CONSTRAINT id_PK PRIMARY KEY (id)
 );
 
