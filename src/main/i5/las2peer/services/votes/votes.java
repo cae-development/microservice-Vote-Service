@@ -88,7 +88,7 @@ public class votes extends Service {
    * 
    * numbers
    * 
-   * @param payload a JSONObject 
+
    * 
    * @return HttpResponse  
    * 
@@ -96,13 +96,12 @@ public class votes extends Service {
   @GET
   @Path("/numbers")
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
        @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "numbers")
   })
   @ApiOperation(value = "numbers", notes = " ")
-  public HttpResponse numbers(@ContentParam String payload) {
-    JSONObject payload_JSON = (JSONObject) JSONValue.parse(payload);
+  public HttpResponse numbers() {
 
     // numbers
     boolean numbers_condition = true;
