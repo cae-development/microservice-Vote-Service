@@ -94,22 +94,22 @@ public class votes extends Service {
    * 
    */
   @GET
-  @Path("//numbers")
+  @Path("/numbers")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.APPLICATION_JSON)
   @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "deleted")
+       @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "numbers")
   })
   @ApiOperation(value = "numbers", notes = " ")
   public HttpResponse numbers(@ContentParam String payload) {
     JSONObject payload_JSON = (JSONObject) JSONValue.parse(payload);
 
-    // deleted
-    boolean deleted_condition = true;
-    if(deleted_condition) {
-      JSONObject deleteSuccess = new JSONObject();
-      HttpResponse deleted = new HttpResponse(deleteSuccess.toJSONString(), HttpURLConnection.HTTP_CREATED);
-      return deleted;
+    // numbers
+    boolean numbers_condition = true;
+    if(numbers_condition) {
+      JSONObject resultJson = new JSONObject();
+      HttpResponse numbers = new HttpResponse(resultJson.toJSONString(), HttpURLConnection.HTTP_CREATED);
+      return numbers;
     }
     return null;
   }
