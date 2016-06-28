@@ -86,22 +86,22 @@ public class votes extends Service {
 
   /**
    * 
-   * deleteVote
+   * numbers
    * 
    * @param payload a JSONObject 
    * 
    * @return HttpResponse  
    * 
    */
-  @DELETE
-  @Path("//delete/{voteId}")
+  @GET
+  @Path("//numbers")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.APPLICATION_JSON)
   @ApiResponses(value = {
        @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "deleted")
   })
-  @ApiOperation(value = "deleteVote", notes = " ")
-  public HttpResponse deleteVote(@ContentParam String payload) {
+  @ApiOperation(value = "numbers", notes = " ")
+  public HttpResponse numbers(@ContentParam String payload) {
     JSONObject payload_JSON = (JSONObject) JSONValue.parse(payload);
 
     // deleted

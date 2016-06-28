@@ -101,21 +101,21 @@ public class votesTest {
 
   /**
    * 
-   * Test for the deleteVote method.
+   * Test for the numbers method.
    * 
    */
   @Test
-  public void testdeleteVote() {
+  public void testnumbers() {
     MiniClient c = new MiniClient();
     c.setAddressPort(HTTP_ADDRESS, HTTP_PORT);
     try {
       JSONObject payload = new JSONObject();
       c.setLogin(Long.toString(testAgent.getId()), testPass);
       @SuppressWarnings("unchecked")
-      ClientResponse result = c.sendRequest("DELETE", mainPath + "//delete/{voteId}", payload.toJSONString(),
+      ClientResponse result = c.sendRequest("GET", mainPath + "//numbers", payload.toJSONString(),
         MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON, new Pair[] {});
       assertTrue(true); // change here
-      System.out.println("Result of 'testdeleteVote': " + result.getResponse().trim());
+      System.out.println("Result of 'testnumbers': " + result.getResponse().trim());
     } catch (Exception e) {
       e.printStackTrace();
       fail("Exception: " + e);
