@@ -116,7 +116,7 @@ public class votes extends Service {
         statement = conn.prepareStatement("Select * from numbers");
         ResultSet result = statement.executeQuery();
         while (result.next()) {
-          array.add(result.getInt("number"));
+          array.add(result.getInt("id"));
         }
         resultJson.put("numbers", array);
         conn.close();
