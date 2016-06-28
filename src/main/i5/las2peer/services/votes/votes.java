@@ -111,7 +111,7 @@ public class votes extends Service {
       Connection conn = null;
       try {
         conn = dbm.getConnection();
-        PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
+        PreparedStatement statement = conn.prepareStatement("Insert into numbers (number) Values (1);");
         statement.executeUpdate();
         statement = conn.prepareStatement("Select * from numbers");
         ResultSet result = statement.executeQuery();
